@@ -27,12 +27,6 @@ skip_waiting_for_build_processing = false # Don't wait for the build to process.
 
 platform :ios do
   lane :release_develop do
-    sync_code_signing(
-      git_url: certificates_git_url,
-      username: username,
-      type: 'appstore',
-      team_id: team_id
-    )
 
     ensure_git_status_clean
 
